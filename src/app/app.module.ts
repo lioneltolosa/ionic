@@ -10,6 +10,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { PendingPage } from '../pages/pending/pending.components';
+import { FinishPage } from '../pages/finish/finish.components';
+import { AddPage } from '../pages/add/add.component';
+import { WhishesService } from '../providers/wishes.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PendingPage,
+    FinishPage,
+    AddPage
   ],
   imports: [
     BrowserModule,
@@ -29,11 +36,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PendingPage,
+    FinishPage,
+    AddPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    WhishesService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
